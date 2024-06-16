@@ -5,7 +5,7 @@ import ProfilePicture from "./profile.png";
 
 export default function Navbar() {
   return (
-    <nav className="bg-cyan-400 col-span-1">
+    <nav className="col-span-1">
       <Link href={"/"}>
         <Image
           src={ProfilePicture}
@@ -15,12 +15,13 @@ export default function Navbar() {
         />
       </Link>
       <h2>Denis Bakhoum</h2>
-      <p>Software Engineer</p>
-      <div className="flex flex-col bg-red-200">
+      <p className="mt-2">Software Engineer, @Harvy</p>
+      <div className="flex flex-col mt-4">
         <Link href={"/about"}>About</Link>
         <Link href={"/now"}>Now</Link>
         <Link href={"/projects"}>Projects</Link>
-        <Link href={"https://github.com/dionysos5"}>Github</Link>
+        <Link href={"#"}>Github</Link>
+        {/* https://github.com/dionysos5 */}
         <Link href={"#"}>Resume</Link>
       </div>
     </nav>
