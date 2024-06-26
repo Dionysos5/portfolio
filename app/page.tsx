@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <div>
       <section>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est
@@ -10,6 +10,6 @@ export default function Home() {
         in fermentum posuere urna nec. Nibh cras pulvinar mattis nunc.
       </section>
       <p>Updated June 16, 2024</p>
-    </main>
+    </div>
   );
 }
