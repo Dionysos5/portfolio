@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className={inter.className + " "}>
         <Navbar />
         <main className="min-h-screen flex flex-col">
-          <main className="ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 flex-grow-0 pb-8 md:pb-14">
+          <div className="mt-10 ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 flex-grow-0 pb-8 md:pb-14">
             {children}
-          </main>
+          </div>
         </main>
       </body>
     </html>
