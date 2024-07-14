@@ -16,7 +16,7 @@ export default function Navbar() {
         />
       </Link>
       <h3 className="pt-4">Denis Bakhoum</h3>
-      <p className="mt-2">Software Engineer, @Harvy</p>
+      <p className="mt-2">Full-stack developer, Harvy</p>
       <div className="flex flex-col mt-4">
         <Link href={"/about"} className="flex items-center">
           <HiOutlineArrowRight className="mr-1" />

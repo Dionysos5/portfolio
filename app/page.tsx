@@ -3,13 +3,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <section>
+      <section className="flex flex-col gap-6 max-w-screen-sm pr-24">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est
         ante in. Hendrerit dolor magna eget est lorem ipsum dolor sit. Feugiat
         in fermentum posuere urna nec. Nibh cras pulvinar mattis nunc.
       </section>
-      <p>Updated June 16, 2024</p>
+
+      <p className="mt-4">Updated June 16, 2024</p>
     </div>
   );
 }
