@@ -6,13 +6,6 @@ import Link from "next/link";
 export default function About() {
   return (
     <article className="flex flex-col gap-6 max-w-screen-sm pr-24">
-      <Image
-        src={ProfilePicture}
-        alt="Profile picture"
-        width={512}
-        height={320}
-        className="w-full h-96 bg-red-200 rounded-md"
-      />
       <p className="leading-relaxed text-sm">
         Hi there! I'm Denis, a full-stack developer at Harvy. In my role, I
         focus on building, testing, and maintaining robust REST APIs and user
