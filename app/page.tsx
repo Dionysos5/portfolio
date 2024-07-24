@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function Home() {
   return (
     <div>
-      <article className="flex flex-col gap-6 max-w-screen-sm pr-24">
+      <article className="flex flex-col gap-6 max-w-screen-sm ">
         <h3 className="text-base font-semibold ">About me</h3>
         <p className="leading-relaxed text-sm text-justify">
           Hi there! I'm Denis, a full-stack developer at Harvy. In my role, I

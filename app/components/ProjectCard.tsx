@@ -1,22 +1,20 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { HiOutlineArrowRight } from "react-icons/hi2";
-import { HiArrowUpRight } from "react-icons/hi2";
 export default function ProjectCard({
-  image,
   title,
+  projectName,
 }: {
-  image: StaticImageData;
   title: string;
+  projectName: string;
 }) {
   return (
     <div>
       <Link href={`/projects/${"weather"}`}>
         <Image
-          src={image}
-          alt="Profile picture"
+          src={`/images/${projectName}.png`}
+          alt={title}
           width={256}
+          height={256}
           className="rounded-md"
         />
       </Link>
