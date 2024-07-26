@@ -54,8 +54,8 @@ const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
         </Link>
       </div>
       <Image
-        src={`/images/${project.name}.png`}
-        alt="Profile picture"
+        src={`./images/${project.name}.png`}
+        alt="Project illustration"
         width={512}
         height={320}
         className="w-full h-96 bg-red-200 rounded-md"
