@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex justify-between px-4">
           <Link href={"/"}>
             <Image
-              src={"./images/profile.png"}
+              src={"/images/profile.png"}
               alt="Profile picture"
               width={50}
               height={50}
@@ -50,7 +50,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 flex flex-col m-0 px-8 py-10 w-80 h-screen hidden md:flex md:min-h-[500px]">
         <Link href={"/"}>
           <Image
-            src={"./images/profile.png"}
+            src={"/images/profile.png"}
             alt="Profile picture"
             width={90}
             height={90}

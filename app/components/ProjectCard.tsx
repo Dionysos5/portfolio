@@ -8,7 +8,7 @@ export default function ProjectCard({
   projectName: string;
 }) {
   return (
-    <div>
+    <div className=" flex  flex-col items-start">
       <Link href={`/projects/${"weather"}`}>
         <Image
           src={`./images/${projectName}.png`}
@@ -18,7 +18,7 @@ export default function ProjectCard({
           className="rounded-md"
         />
       </Link>
-      <p className="mt-2 text-sm text-center">{title}</p>
+      <p className="mt-2 pl-2 text-sm text-center sm:text-left">{title}</p>
     </div>
   );
 }

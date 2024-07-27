@@ -4,9 +4,19 @@ import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { PROJECTS } from "../projects";
 
+export function generateMetadata({
+  params,
+}: {
+  params: { projectName: string };
+}) {
+  return {
+    title: params.projectName[0].toUpperCase() + params.projectName.slice(1),
+    description: "Project details page",
+  };
+}
 export async function generateStaticParams() {
-  return PROJECTS.map((post) => ({
-    projectName: post.name,
+  return PROJECTS.map((project) => ({
+    projectName: project.name,
   }));
 }
 const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
@@ -15,14 +25,14 @@ const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
 
   if (!project) {
     return (
-      <article className="flex flex-col gap-6 max-w-screen-sm pr-24">
+      <article className="flex flex-col gap-6 max-w-screen-sm ">
         <p className="text-justify">Project not found</p>
       </article>
     );
   }
 
   return (
-    <article className="flex flex-col gap-6 max-w-screen-sm pr-24">
+    <article className="flex flex-col gap-6 max-w-screen-sm ">
       <h1 className="capitalize font-semibold text-lg">{project.name}</h1>
       <p className="text-justify">{project.description}</p>
 
@@ -57,8 +67,8 @@ const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
         src={`../images/${project.name}.png`}
         alt="Project illustration"
         width={512}
-        height={320}
-        className="w-full h-96 bg-red-200 rounded-md"
+        height={512}
+        className="w-full  bg-red-200 rounded-md"
       />
     </article>
   );
