@@ -15,8 +15,6 @@ export default function Projects() {
 
       <div className=" grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ProjectCard projectName="weather" title={"CLI Weather"} />
-        <ProjectCard projectName="weather" title={"CLI Weather"} />
-        <ProjectCard projectName="weather" title={"CLI Weather"} />
       </div>
     </article>
   );

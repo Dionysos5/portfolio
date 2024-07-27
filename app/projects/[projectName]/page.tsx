@@ -68,7 +68,7 @@ const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
         alt="Project illustration"
         width={512}
         height={512}
-        className="w-full  bg-red-200 rounded-md"
+        className="w-full rounded-md"
       />
     </article>
   );
