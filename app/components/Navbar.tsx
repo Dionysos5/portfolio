@@ -33,6 +33,14 @@ export default function Navbar() {
               <HiOutlineArrowRight className="mr-1" />
               Projects
             </Link>
+
+            <Link
+              href={"/contact"}
+              className="flex items-center text-sm font-semibold"
+            >
+              <HiOutlineArrowRight className="mr-1" />
+              Contact
+            </Link>
             {/* <Link href={"/uses"} className="flex items-center text-sm"> */}
             {/*   <HiOutlineArrowRight className="mr-1" /> */}
             {/*   Uses */}
@@ -70,6 +78,13 @@ export default function Navbar() {
           >
             <HiOutlineArrowRight className="mr-1" />
             Projects
+          </Link>
+          <Link
+            href={"/contact"}
+            className="flex items-center text-sm font-semibold"
+          >
+            <HiOutlineArrowRight className="mr-1" />
+            Contact
           </Link>
           {/* <Link href={"/uses"} className="flex items-center text-sm"> */}
           {/*   <HiOutlineArrowRight className="mr-1" /> */}
