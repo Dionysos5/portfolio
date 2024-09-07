@@ -37,7 +37,7 @@ export default function Home() {
 
         <div className="flex justify-center">
           <Link
-            className="w-32 flex justify-center items-center py-2 bg-teal-700 text-base text-white rounded-md"
+            className="w-32 flex justify-center items-center py-3 px-5 cursor-pointer text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none "
             href={"/projects"}
           >
             My Projects
@@ -69,6 +69,14 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+        <div className="flex justify-center">
+          <a
+            href="/resume.pdf"
+            className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          >
+            Download full resume
+          </a>
+        </div>
       </article>
     </div>
   );
