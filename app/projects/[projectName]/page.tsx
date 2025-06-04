@@ -4,11 +4,12 @@ import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { PROJECTS } from "../projects";
 
-export function generateMetadata({
-  params,
-}: {
-  params: { projectName: string };
-}) {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ projectName: string }>;
+  }
+) {
+  const params = await props.params;
   return {
     title: params.projectName[0].toUpperCase() + params.projectName.slice(1),
     description: "Project details page",
@@ -19,7 +20,8 @@ export async function generateStaticParams() {
     projectName: project.name,
   }));
 }
-const ProjectDetails = ({ params }: { params: { projectName: string } }) => {
+const ProjectDetails = async (props: { params: Promise<{ projectName: string }> }) => {
+  const params = await props.params;
   const { projectName } = params;
   const project = PROJECTS.find((project) => project.name === projectName);
 
