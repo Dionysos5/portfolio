@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { GitHubActivity } from "./components/GitHubActivity";
 
 export default function Home() {
   return (
@@ -77,6 +78,9 @@ export default function Home() {
             Download full resume
           </a>
         </div>
+
+        <h3 className="text-base font-semibold pt-4">GitHub Activity</h3>
+        <GitHubActivity />
       </article>
     </div>
   );
