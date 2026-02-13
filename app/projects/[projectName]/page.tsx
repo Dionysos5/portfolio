@@ -66,7 +66,7 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
         </Link>
       </div>
       <Image
-        src={`../images/${project.name}.png`}
+        src={`/images/${project.name}.png`}
         alt="Project illustration"
         width={512}
         height={512}

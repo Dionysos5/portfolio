@@ -11,7 +11,7 @@ export default function ProjectCard({
     <div className=" flex  flex-col items-start">
       <Link href={`/projects/${"weather"}`}>
         <Image
-          src={`./images/${projectName}.png`}
+          src={`/images/${projectName}.png`}
           alt={title}
           width={256}
           height={256}
