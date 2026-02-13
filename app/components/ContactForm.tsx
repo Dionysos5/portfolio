@@ -2,11 +2,11 @@ export default function ContactForm() {
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h3 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-gray-100">
+        <div className="py-4 px-4 mx-auto max-w-screen-md">
+          <h3 className="mb-4 text-lg font-semibold text-center text-gray-900 dark:text-gray-100">
             Get in touch
           </h3>
-          <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+          <p className="mb-8 font-light text-center text-gray-600 dark:text-gray-400 text-sm">
             Have a question or want to work together? Just fill out the form
             below and I'll get back to you as soon as possible.
           </p>
@@ -20,7 +20,7 @@ export default function ContactForm() {
                 type="text"
                 name="name"
                 id="name"
-                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
+                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
                 placeholder="Name"
                 required
               />
@@ -30,7 +30,7 @@ export default function ContactForm() {
                 type="email"
                 name="email"
                 id="email"
-                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
+                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
                 placeholder="Email"
                 required
               />
@@ -40,7 +40,7 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 rows={6}
-                className="block p-2.5 w-full text-sm text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:border-primary-500 dark:placeholder-gray-400"
+                className="block p-2.5 w-full text-sm text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 dark:placeholder-gray-400"
                 placeholder="Your Message"
               />
             </div>
