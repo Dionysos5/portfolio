@@ -67,7 +67,7 @@ export default function Resume() {
               <span className="text-xs text-gray-400 dark:text-gray-500 w-32 shrink-0">
                 {category}
               </span>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 flex-1">
                 {items.map((skill) => (
                   <span
                     key={skill}
