@@ -1,7 +1,7 @@
 export default function Uses() {
   return (
-    <article className="flex flex-col gap-6 max-w-screen-sm pr-24">
-      <h2 className="text-base font-semibold">Uses</h2>
+    <article className="flex flex-col gap-6 max-w-screen-sm">
+      <h2 className="text-lg font-semibold">Uses</h2>
       <p className="leading-relaxed text-sm">
         My setup for AI-assisted development. Constantly experimenting with tools
         to optimize workflow and reduce friction.
