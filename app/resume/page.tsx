@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FiArrowRight } from "react-icons/fi";
+
 
 export const metadata: Metadata = {
   title: "Resume",
@@ -71,7 +71,7 @@ export default function Resume() {
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    className="text-xs px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
                   >
                     {skill}
                   </span>
@@ -90,7 +90,7 @@ export default function Resume() {
           {experience.map((job, i) => (
             <div
               key={i}
-              className="rounded-lg border border-gray-200 dark:border-gray-800 px-4 py-3"
+              className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3"
             >
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-sm">
@@ -116,13 +116,6 @@ export default function Resume() {
             </div>
           ))}
         </div>
-        <a
-          href="/resume.pdf"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors mt-4"
-        >
-          Download PDF
-          <FiArrowRight size={12} />
-        </a>
       </section>
     </article>
   );

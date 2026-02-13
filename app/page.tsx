@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { GitHubActivity } from "./components/GitHubActivity";
 import { getAllPosts } from "@/lib/blog";
 
@@ -19,24 +19,27 @@ export default function Home() {
             I care about clean code, great DX, and software that&apos;s built
             to last.
           </p>
-          <div className="flex items-center gap-4 mt-5">
+          <div className="flex items-center gap-3 mt-5">
             <Link
               href="https://github.com/dionysos5"
-              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
+              <FiGithub size={14} />
               GitHub
             </Link>
             <Link
               href="https://www.linkedin.com/in/denis-bakhoum"
-              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
+              <FiLinkedin size={14} />
               LinkedIn
             </Link>
             <a
-              href="/resume.pdf"
-              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+              href="mailto:contact@denisbakhoum.xyz"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
-              Resume
+              <FiMail size={14} />
+              Email
             </a>
           </div>
         </section>
@@ -56,7 +59,7 @@ export default function Home() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group rounded-lg border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+                  className="group rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-sm transition-all"
                 >
                   <div className="flex items-baseline justify-between gap-4">
                     <span className="text-sm text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">

@@ -24,7 +24,7 @@ export default function BlogIndex() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group rounded-lg border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+              className="group rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-sm transition-all"
             >
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="text-sm font-medium group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
