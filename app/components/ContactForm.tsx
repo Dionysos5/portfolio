@@ -20,7 +20,7 @@ export default function ContactForm() {
                 type="text"
                 name="name"
                 id="name"
-                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
+                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-gray-900 focus:ring-2 focus:ring-gray-900 dark:focus:border-gray-100 dark:focus:ring-gray-100 block w-full p-2.5 dark:placeholder-gray-400"
                 placeholder="Name"
                 required
               />
@@ -30,7 +30,7 @@ export default function ContactForm() {
                 type="email"
                 name="email"
                 id="email"
-                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-500 block w-full p-2.5 dark:placeholder-gray-400"
+                className="shadow-sm bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 text-sm rounded-lg focus:border-gray-900 focus:ring-2 focus:ring-gray-900 dark:focus:border-gray-100 dark:focus:ring-gray-100 block w-full p-2.5 dark:placeholder-gray-400"
                 placeholder="Email"
                 required
               />
@@ -40,13 +40,13 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 rows={6}
-                className="block p-2.5 w-full text-sm text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 dark:placeholder-gray-400"
+                className="block p-2.5 w-full text-sm text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:border-gray-900 focus:ring-2 focus:ring-gray-900 dark:focus:border-gray-100 dark:focus:ring-gray-100 dark:placeholder-gray-400"
                 placeholder="Your Message"
               />
             </div>
             <button
               type="submit"
-              className="py-3 px-5 cursor-pointer text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none "
+              className="py-3 px-5 cursor-pointer text-sm font-medium text-center text-white rounded-lg bg-gray-900 dark:bg-gray-100 dark:text-gray-900 sm:w-fit hover:bg-gray-800 dark:hover:bg-gray-200 focus:ring-4 focus:outline-none"
             >
               Send message
             </button>
