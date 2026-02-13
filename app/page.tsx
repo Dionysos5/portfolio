@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div>
       <article className="flex flex-col gap-6 max-w-screen-sm ">
-        <h3 className="text-base font-semibold ">About me</h3>
-        <p className="leading-relaxed text-sm text-justify">
+        <h3 className="text-lg font-semibold">About me</h3>
+        <p className="leading-relaxed text-sm text-justify text-gray-600 dark:text-gray-300">
           Hi there! I'm Denis, a full-stack developer at Harvy. In my role, I
           focus on building, testing, and maintaining robust REST APIs and user
           interfaces. I also occasionally work on DevOps tools to improve
@@ -15,13 +15,13 @@ export default function Home() {
           passionate about creating innovative solutions that make a real
           impact.
         </p>
-        <p className="leading-relaxed text-sm text-justify">
+        <p className="leading-relaxed text-sm text-justify text-gray-600 dark:text-gray-300">
           When I'm not coding, you can find me immersed in a wide range of
           books, from history and philosophy to the latest advancements in
           technology. I also enjoy playing guitar, learning new languages, and
           challenging myself at chess.
         </p>
-        <p className="leading-relaxed text-sm">
+        <p className="leading-relaxed text-sm text-gray-600 dark:text-gray-300">
           Feel free to connect with me on{" "}
           <Link href="https://github.com/dionysos5" className="underline">
             GitHub
@@ -79,7 +79,7 @@ export default function Home() {
           </a>
         </div>
 
-        <h3 className="text-base font-semibold pt-4">GitHub Activity</h3>
+        <h3 className="text-lg font-semibold pt-4">GitHub Activity</h3>
         <GitHubActivity />
       </article>
     </div>
