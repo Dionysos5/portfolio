@@ -45,25 +45,25 @@ export default function Home() {
             <MdOutlineKeyboardArrowRight />
           </Link>
         </div>
-        <p className="leading-relaxed text-sm">Experience:</p>
-        <table className="leading-relaxed text-sm">
+        <h3 className="text-lg font-semibold">Experience</h3>
+        <table className="leading-relaxed text-sm w-full">
           <tbody>
-            <tr>
-              <td className="font-semibold">2023 - Present</td>
-              <td>
+            <tr className="border-b border-gray-200 dark:border-gray-700">
+              <td className="py-3 text-gray-500 dark:text-gray-400">2023 - Present</td>
+              <td className="py-3">
                 Full-stack developer, <br /> Harvy
               </td>
             </tr>
-            <tr>
-              <td className="font-semibold">2023</td>
-              <td>
+            <tr className="border-b border-gray-200 dark:border-gray-700">
+              <td className="py-3 text-gray-500 dark:text-gray-400">2023</td>
+              <td className="py-3">
                 Full-stack developer intern,
                 <br /> Orange Business
               </td>
             </tr>
             <tr>
-              <td className="font-semibold">2022</td>
-              <td>
+              <td className="py-3 text-gray-500 dark:text-gray-400">2022</td>
+              <td className="py-3">
                 Full-stack developer intern,
                 <br /> Phealing
               </td>
