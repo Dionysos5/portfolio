@@ -15,7 +15,7 @@ export default function ProjectCard({
           alt={title}
           width={256}
           height={256}
-          className="rounded-md"
+          className="rounded-md border border-gray-200 dark:border-gray-700 hover:opacity-90 transition-opacity"
         />
       </Link>
       <p className="mt-2 pl-2 text-sm text-center sm:text-left">{title}</p>
