@@ -2,12 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
+  const pathname = usePathname();
+
+  const linkClass = (href: string) => {
+    const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+    return `flex items-center text-sm font-semibold transition-colors ${
+      isActive
+        ? "text-primary-700 dark:text-primary-400"
+        : "text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-400"
+    }`;
+  };
 
   const toggleTheme = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
@@ -26,35 +37,25 @@ export default function Navbar() {
             />
           </Link>{" "}
           <div className="flex gap-3 pr-4 items-center">
-            <Link
-              href={"/"}
-              className="flex items-center text-sm font-semibold"
-            >
+            <Link href={"/"} className={linkClass("/")}>
               <HiOutlineArrowRight className="mr-1" />
               About
             </Link>
-            <Link
-              href={"/projects"}
-              className="flex items-center text-sm font-semibold"
-            >
+            <Link href={"/projects"} className={linkClass("/projects")}>
               <HiOutlineArrowRight className="mr-1" />
               Projects
             </Link>
-
-            <Link
-              href={"/contact"}
-              className="flex items-center text-sm font-semibold"
-            >
+            <Link href={"/contact"} className={linkClass("/contact")}>
               <HiOutlineArrowRight className="mr-1" />
               Contact
             </Link>
-            <Link href={"/uses"} className="flex items-center text-sm font-semibold">
+            <Link href={"/uses"} className={linkClass("/uses")}>
               <HiOutlineArrowRight className="mr-1" />
               Uses
             </Link>
             <Link
               href={"https://github.com/dionysos5"}
-              className="flex items-center text-sm font-semibold"
+              className="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
             >
               <FaGithub className="mr-1" />
               Github
@@ -83,33 +84,27 @@ export default function Navbar() {
           />
         </Link>
         <h3 className="pt-4 text-base font-semibold">Denis Bakhoum</h3>
-        <p className="text-sm">Full-stack developer, Harvy</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400">Full-stack developer, Harvy</p>
         <div className="flex flex-col mt-4 gap-1">
-          <Link href={"/"} className="flex items-center text-sm font-semibold">
+          <Link href={"/"} className={linkClass("/")}>
             <HiOutlineArrowRight className="mr-1" />
             About
           </Link>
-          <Link
-            href={"/projects"}
-            className="flex items-center text-sm font-semibold"
-          >
+          <Link href={"/projects"} className={linkClass("/projects")}>
             <HiOutlineArrowRight className="mr-1" />
             Projects
           </Link>
-          <Link
-            href={"/contact"}
-            className="flex items-center text-sm font-semibold"
-          >
+          <Link href={"/contact"} className={linkClass("/contact")}>
             <HiOutlineArrowRight className="mr-1" />
             Contact
           </Link>
-          <Link href={"/uses"} className="flex items-center text-sm font-semibold">
+          <Link href={"/uses"} className={linkClass("/uses")}>
             <HiOutlineArrowRight className="mr-1" />
             Uses
           </Link>
           <Link
             href={"https://github.com/dionysos5"}
-            className="flex items-center text-sm font-semibold"
+            className="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
           >
             <FaGithub className="mr-1" />
             Github
@@ -133,7 +128,7 @@ export default function Navbar() {
             </button>
           )}
         </div>
-        <div className="absolute bottom-12 text-gray-500 dark:text-gray-400">© 2024</div>
+        <div className="absolute bottom-12 text-gray-500 dark:text-gray-400">© 2025</div>
       </nav>
     </div>
   );
