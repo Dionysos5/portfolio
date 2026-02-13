@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 
@@ -18,15 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className + " "}>
-        <Navbar />
-        <main className="min-h-screen flex flex-col">
-          <div className="mt-10 ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 flex-grow-0 pb-8 md:pb-14">
-            {children}
-          </div>
-        </main>
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider>
+          <Navbar />
+          <main className="min-h-screen flex flex-col">
+            <div className="mt-10 ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 flex-grow-0 pb-8 md:pb-14">
+              {children}
+            </div>
+          </main>
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

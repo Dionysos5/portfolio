@@ -79,8 +79,8 @@ export default function Uses() {
         </li>
       </ul>
 
-      <div className="pt-4 border-t border-gray-200">
-        <p className="leading-relaxed text-sm italic">
+      <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+        <p className="leading-relaxed text-sm italic text-gray-600 dark:text-gray-400">
           I match the tool to the context. Cursor for AI pair programming, Zed
           for speed, Vim for precision. Custom keyboard layers mean I rarely
           touch the mouse.

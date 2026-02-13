@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { PROJECTS } from "../projects";
 
@@ -26,11 +26,7 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
   const project = PROJECTS.find((project) => project.name === projectName);
 
   if (!project) {
-    return (
-      <article className="flex flex-col gap-6 max-w-screen-sm ">
-        <p className="text-justify">Project not found</p>
-      </article>
-    );
+    notFound();
   }
 
   return (
@@ -39,7 +35,7 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
       <p className="text-justify">{project.description}</p>
 
       <div className="flex gap-2">
-        <p className="bg-green-100  text-green-700 uppercase px-1 py-[0.5] font-semibold">
+        <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
           Demo
         </p>
         <Link href={"#"} className="flex gap-1 items-center underline">
@@ -48,13 +44,13 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
         </Link>
       </div>
       <div className="flex gap-2">
-        <p className="bg-green-100  text-green-700 uppercase px-1 py-[0.5] font-semibold">
+        <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
           Stack
         </p>
         <span className="flex gap-1 items-center ">{project.stack}</span>
       </div>
       <div className="flex gap-2">
-        <p className="bg-green-100  text-green-700 uppercase px-1 py-[0.5] font-semibold">
+        <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
           Source
         </p>
         <Link
