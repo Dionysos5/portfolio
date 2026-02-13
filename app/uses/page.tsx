@@ -1,83 +1,84 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Uses",
+  description:
+    "Tools, hardware, and software Denis Bakhoum uses for AI-assisted development.",
+};
+
+const sections = [
+  {
+    label: "AI Development Stack",
+    items: [
+      { name: "Cursor", desc: "Primary IDE for AI-assisted coding" },
+      { name: "Claude Code", desc: "Deep reasoning and architecture discussions" },
+      { name: "opencode", desc: "Quick CLI assistance" },
+    ],
+  },
+  {
+    label: "Editors",
+    items: [
+      { name: "Cursor", desc: "When I want AI deeply integrated" },
+      { name: "Zed", desc: "When I want raw speed" },
+      { name: "LazyVim", desc: "When I want modal editing power" },
+    ],
+  },
+  {
+    label: "Hardware & Environment",
+    items: [
+      { name: "MacBook Pro M4, 48GB RAM", desc: "Running multiple AI tools and containers" },
+      { name: "iTerm2 + tmux", desc: "Persistent terminal sessions" },
+      { name: "Karabiner Elements", desc: "Caps Lock as hyper key with multiple layers" },
+    ],
+  },
+  {
+    label: "Browsers",
+    items: [
+      { name: "Arc", desc: "Work browsing (spaces for different contexts)" },
+      { name: "Firefox", desc: "Personal browsing" },
+    ],
+  },
+  {
+    label: "Productivity",
+    items: [
+      { name: "Rectangle", desc: "Window management" },
+      { name: "Stats", desc: "System monitoring" },
+      { name: "Handy", desc: "Open source dictation tool" },
+      { name: "MonitorControl", desc: "External display brightness" },
+    ],
+  },
+];
+
 export default function Uses() {
   return (
-    <article className="flex flex-col gap-6 max-w-screen-sm">
-      <h2 className="text-lg font-semibold">Uses</h2>
-      <p className="leading-relaxed text-sm">
-        My setup for AI-assisted development. Constantly experimenting with tools
-        to optimize workflow and reduce friction.
-      </p>
+    <article className="flex flex-col gap-8 max-w-screen-sm">
+      <div>
+        <h2 className="text-lg font-semibold">Uses</h2>
+        <p className="leading-relaxed text-sm text-gray-600 dark:text-gray-300 mt-2">
+          My setup for AI-assisted development. Constantly experimenting with
+          tools to optimize workflow and reduce friction.
+        </p>
+      </div>
 
-      <h3 className="text-base font-semibold pt-2">AI Development Stack</h3>
-      <ul className="leading-relaxed text-sm list-disc pl-5 space-y-1">
-        <li>
-          <strong>Cursor</strong> - Primary IDE for AI-assisted coding
-        </li>
-        <li>
-          <strong>Claude Code</strong> - Deep reasoning and architecture
-          discussions
-        </li>
-        <li>
-          <strong>opencode</strong> - Quick CLI assistance
-        </li>
-        <li>
-          <strong>Workflow:</strong> Context-switch between AI agents based on
-          task complexity
-        </li>
-      </ul>
-
-      <h3 className="text-base font-semibold pt-2">Editors</h3>
-      <ul className="leading-relaxed text-sm list-disc pl-5 space-y-1">
-        <li>
-          <strong>Cursor</strong> - When I want AI deeply integrated
-        </li>
-        <li>
-          <strong>Zed</strong> - When I want raw speed
-        </li>
-        <li>
-          <strong>LazyVim</strong> - When I want modal editing power
-        </li>
-      </ul>
-
-      <h3 className="text-base font-semibold pt-2">Hardware & Environment</h3>
-      <ul className="leading-relaxed text-sm list-disc pl-5 space-y-1">
-        <li>
-          <strong>MacBook Pro M4, 48GB RAM</strong> - Running multiple AI tools
-          and containers
-        </li>
-        <li>
-          <strong>iTerm2 + tmux</strong> - Persistent terminal sessions
-        </li>
-        <li>
-          <strong>Karabiner Elements</strong> - Custom keyboard layers (Caps Lock
-          as hyper key with multiple layers for app-specific shortcuts)
-        </li>
-      </ul>
-
-      <h3 className="text-base font-semibold pt-2">Browsers</h3>
-      <ul className="leading-relaxed text-sm list-disc pl-5 space-y-1">
-        <li>
-          <strong>Arc</strong> - Work browsing (spaces for different contexts)
-        </li>
-        <li>
-          <strong>Firefox</strong> - Personal browsing
-        </li>
-      </ul>
-
-      <h3 className="text-base font-semibold pt-2">Productivity</h3>
-      <ul className="leading-relaxed text-sm list-disc pl-5 space-y-1">
-        <li>
-          <strong>Rectangle</strong> - Window management
-        </li>
-        <li>
-          <strong>Stats</strong> - System monitoring
-        </li>
-        <li>
-          <strong>Handy</strong> - Open source dictation tool
-        </li>
-        <li>
-          <strong>MonitorControl</strong> - External display brightness
-        </li>
-      </ul>
+      <div className="flex flex-col gap-6">
+        {sections.map((section) => (
+          <div key={section.label}>
+            <h3 className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+              {section.label}
+            </h3>
+            <div className="flex flex-col gap-1.5">
+              {section.items.map((item) => (
+                <div key={item.name} className="text-sm">
+                  <span className="font-medium">{item.name}</span>
+                  <span className="text-gray-500 dark:text-gray-400">
+                    {" "}&mdash; {item.desc}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
 
       <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
         <p className="leading-relaxed text-sm italic text-gray-600 dark:text-gray-400">
