@@ -9,7 +9,7 @@ export default function ProjectCard({
 }) {
   return (
     <div className=" flex  flex-col items-start">
-      <Link href={`/projects/${"weather"}`}>
+      <Link href={`/projects/${projectName}`}>
         <Image
           src={`/images/${projectName}.png`}
           alt={title}
