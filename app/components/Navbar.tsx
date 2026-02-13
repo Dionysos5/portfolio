@@ -4,15 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { FiHome, FiEdit3, FiFolder, FiFileText, FiTool } from "react-icons/fi";
 import { useTheme } from "next-themes";
+import type { ReactNode } from "react";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
-  { href: "/projects", label: "Projects" },
-  { href: "/resume", label: "Resume" },
-  { href: "/uses", label: "Uses" },
-  { href: "/contact", label: "Contact" },
+const navLinks: { href: string; label: string; icon: ReactNode }[] = [
+  { href: "/", label: "Home", icon: <FiHome size={14} /> },
+  { href: "/blog", label: "Blog", icon: <FiEdit3 size={14} /> },
+  { href: "/projects", label: "Projects", icon: <FiFolder size={14} /> },
+  { href: "/resume", label: "Resume", icon: <FiFileText size={14} /> },
+  { href: "/uses", label: "Uses", icon: <FiTool size={14} /> },
 ];
 
 export default function Navbar() {
@@ -93,12 +94,13 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm py-1.5 px-2 -ml-2 rounded-md transition-colors ${
+              className={`flex items-center gap-2 text-sm py-1.5 px-2 -ml-2 rounded-lg transition-colors ${
                 isActive(link.href)
                   ? "text-gray-900 dark:text-gray-100 font-medium bg-gray-200/70 dark:bg-gray-800"
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800/50"
               }`}
             >
+              {link.icon}
               {link.label}
             </Link>
           ))}

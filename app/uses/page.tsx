@@ -51,7 +51,7 @@ const sections = [
 
 export default function Uses() {
   return (
-    <article className="flex flex-col gap-8 max-w-screen-sm">
+    <article className="flex flex-col gap-8 max-w-2xl">
       <div>
         <h2 className="text-lg font-semibold">Uses</h2>
         <p className="leading-relaxed text-sm text-gray-600 dark:text-gray-300 mt-2">
@@ -63,29 +63,24 @@ export default function Uses() {
       <div className="flex flex-col gap-6">
         {sections.map((section) => (
           <div key={section.label}>
-            <h3 className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            <h3 className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">
               {section.label}
             </h3>
-            <div className="flex flex-col gap-1.5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {section.items.map((item) => (
-                <div key={item.name} className="text-sm">
-                  <span className="font-medium">{item.name}</span>
-                  <span className="text-gray-500 dark:text-gray-400">
-                    {" "}&mdash; {item.desc}
-                  </span>
+                <div
+                  key={item.name}
+                  className="rounded-xl border border-gray-200 dark:border-gray-800 px-3 py-2.5 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-sm transition-all"
+                >
+                  <span className="text-sm font-medium">{item.name}</span>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-        <p className="leading-relaxed text-sm italic text-gray-600 dark:text-gray-400">
-          I match the tool to the context. Cursor for AI pair programming, Zed
-          for speed, Vim for precision. Custom keyboard layers mean I rarely
-          touch the mouse.
-        </p>
       </div>
     </article>
   );

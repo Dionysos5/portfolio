@@ -66,7 +66,7 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
         alt="Project illustration"
         width={512}
         height={512}
-        className="w-full rounded-md"
+        className="w-full rounded-xl"
       />
     </article>
   );
