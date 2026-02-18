@@ -11,7 +11,8 @@ export default function Projects() {
     <article className="flex flex-col gap-6 max-w-screen-sm ">
       <h2 className="text-lg font-semibold">Projects</h2>
 
-      <div className=" grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ProjectCard projectName="france-leave-planner" title={"France Leave Planner"} />
         <ProjectCard projectName="weather" title={"CLI Weather"} />
       </div>
     </article>

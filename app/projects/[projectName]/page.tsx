@@ -34,15 +34,17 @@ const ProjectDetails = async (props: { params: Promise<{ projectName: string }> 
       <h1 className="capitalize font-semibold text-lg">{project.name}</h1>
       <p className="text-justify">{project.description}</p>
 
-      <div className="flex gap-2">
-        <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
-          Demo
-        </p>
-        <Link href={"#"} className="flex gap-1 items-center underline">
-          Weather App
-          <FaArrowUpRightFromSquare className="text-xs mr-1" />
-        </Link>
-      </div>
+      {project.demo && (
+        <div className="flex gap-2">
+          <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
+            Demo
+          </p>
+          <Link href={project.demo} className="flex gap-1 items-center underline">
+            Live Site
+            <FaArrowUpRightFromSquare className="text-xs mr-1" />
+          </Link>
+        </div>
+      )}
       <div className="flex gap-2">
         <p className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 uppercase px-1 py-[0.5] font-semibold">
           Stack
