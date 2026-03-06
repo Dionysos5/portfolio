@@ -13,6 +13,7 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ProjectCard projectName="france-leave-planner" title={"France Leave Planner"} />
+        <ProjectCard projectName="meal-board" title={"MealBoard"} />
         <ProjectCard projectName="weather" title={"CLI Weather"} />
       </div>
     </article>
